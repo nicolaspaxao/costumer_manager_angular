@@ -1,0 +1,113 @@
+:host {
+
+  .page-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 35px;
+
+    i {
+      font-size: 1.7rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+    }
+  }
+
+  .page-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+
+    ul {
+      align-self: self-start;
+      display: flex;
+      gap: 20px;
+
+      .page-nav-action {
+        display: flex;
+        gap: 2px;
+        align-items: end;
+
+        i {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 1rem;
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+
+  .filter-input {
+    align-self: self-end;
+
+    input {
+      display: block;
+      padding: 2px 4px;
+      border: 1px solid rgb(177, 177, 177);
+      max-lines: 1;
+      outline: none;
+    }
+  }
+
+
+  .costumer-list {
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    &-card {
+      &-header {
+        background: #03A9F4;
+        padding: 12px;
+        color: #fff;
+      }
+
+      &-content {
+        padding: 20px 12px;
+        border: 1px solid rgb(201, 201, 201);
+        display: flex;
+        gap: 20px;
+
+        i {
+          color: #03A9F4;
+          font-size: 4rem;
+        }
+
+        .costumer-details {
+
+          .costumer-details-sections {
+            margin-bottom: 10px;
+            font-size: 1rem;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            i {
+              font-size: 0.9rem;
+              color: #03A9F4;
+            }
+
+            .title {
+              font-weight: bold;
+              font-size: 0.8rem;
+            }
+
+            .content {
+              font-size: 1rem;
+            }
+
+          }
+        }
+      }
+    }
+  }
+}

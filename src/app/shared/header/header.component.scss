@@ -1,0 +1,52 @@
+:host {
+  header {
+    display: flex;
+    width: 100vw;
+    background: #03A9F4;
+    color: #ffffff;
+    padding: 15px 20px;
+
+    .header {
+      display: flex;
+      width: 1280px;
+      margin: 0 auto;
+      justify-content: space-between;
+      align-items: center;
+
+      &-logo {
+        display: flex;
+        gap: 10px;
+
+        i {
+          padding: 0;
+          font-size: 2rem;
+        }
+
+        h2 {
+          font-size: 1.6rem;
+          line-height: 1.4;
+        }
+      }
+
+      nav {
+        .header-navbar {
+          display: flex;
+          gap: 20px;
+
+          &-item {
+            font-size: 1.2rem
+          }
+        }
+      }
+    }
+  }
+
+  .active {
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    background: #ffffff;
+    color: #03A9F4;
+  }
+}

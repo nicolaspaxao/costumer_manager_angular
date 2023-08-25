@@ -1,0 +1,51 @@
+<section class="page-title">
+  <i class="fa-solid fa-user"></i>
+  <h1>Clientes</h1>
+</section>
+
+<section class="page-nav">
+  <ul>
+    <li class="page-nav-action">
+      <i class="fa-solid fa-border-all"></i>
+      <p>Visão em Cartão</p>
+    </li>
+    <li class="page-nav-action">
+      <i class="fa-solid fa-list"></i>
+      <p>Visão em Lista</p>
+    </li>
+    <li class="page-nav-action">
+      <i class="fa-solid fa-user-plus"></i>
+      <p>Adicionar Cliente</p>
+    </li>
+  </ul>
+  <div class="filter-input">
+    <label for="filter">Filtro:</label>
+    <input type="text" id="filter" name="filter">
+  </div>
+</section>
+
+<section aria-label="Lista de Clientes">
+  <ol class="costumer-list">
+    <li class="costumer-list-card" *ngFor="let costumer of costumerList">
+      <div class="costumer-list-card-header">
+        <h3>{{costumer.firstName}} {{costumer.lastName}}</h3>
+      </div>
+
+      <div class="costumer-list-card-content">
+        <i [class]="costumer.gender == 0 ? 'fa-solid fa-person' : 'fa-solid fa-person-dress' "></i>
+        <div class="costumer-details">
+          <div class="costumer-details-sections">
+            <p class="title">Email</p>
+            <p class="content">{{costumer.email}}</p>
+          </div>
+          <div class="costumer-details-sections">
+            <p class="title">Localidade</p>
+            <p class="content"><i class="fa-solid fa-location-dot"></i> {{costumer.address}}
+              <span>{{costumer.city}}-{{costumer.state}}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ol>
+</section>
